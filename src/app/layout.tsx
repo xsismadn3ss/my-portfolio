@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-inherit via-blue-200 to-gray-400 dark:from-inherit dark:via-cyan-900 dark:to-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-inherit via-blue-200 to-gray-400 dark:from-inherit dark:via-cyan-900 dark:to-black transition duration-150 ease-in`}
       >
         <ThemeProvider attribute={"class"} defaultTheme="dark" enableSystem>
           <NavBar />
