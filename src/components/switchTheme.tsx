@@ -20,7 +20,10 @@ const SwitchTheme = () => {
     return (
         <div className="flex gap-2">
             <Switch className="drop-shadow-lg" checked={isChecked} onCheckedChange={handleChange} />
-            {isChecked ? <MoonIcon className="text-primary" /> : <SunIcon className="text-primary" />}
+            {isChecked ?
+                <MoonIcon className="text-primary drop-shadow-lg" /> :
+                <SunIcon className="text-primary drop-shadow-lg" />
+            }
         </div>
     )
 }
