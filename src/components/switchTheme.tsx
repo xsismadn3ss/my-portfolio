@@ -6,21 +6,21 @@ import { useState, useEffect } from "react"
 
 const SwitchTheme = () => {
     const { theme, setTheme } = useTheme()
-    const [isCheked, setIsCheked] = useState(false)
+    const [isChecked, setIsCheked] = useState(false)
 
     useEffect(() => {
         setIsCheked(theme === 'dark')
     }, [theme])
 
     const handleChange = () => {
-        setIsCheked(!isCheked)
-        setTheme(isCheked ? 'light' : 'dark')
-    }
+        setTheme(theme === "dark" ? "light" : "dark");
+        setIsCheked(!isChecked);
+    };
 
     return (
-        <div>
-            <Switch className="drop-shadow-lg" checked={isCheked} onCheckedChange={handleChange} />
-            {isCheked ? <MoonIcon /> : <SunIcon />}
+        <div className="flex gap-2">
+            <Switch className="drop-shadow-lg" checked={isChecked} onCheckedChange={handleChange} />
+            {isChecked ? <MoonIcon className="text-primary" /> : <SunIcon className="text-primary" />}
         </div>
     )
 }
