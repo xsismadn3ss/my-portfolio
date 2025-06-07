@@ -32,7 +32,9 @@ const fetchGithubProfile = async (username: string): Promise<GithubProfile | nul
   return res
 }
 
-export const GithubHoverCard = ({ username, children: children }: { username: string, children: React.ReactNode }) => {
+export const GithubHoverCard = (
+  { username, children: children, className }:
+    { username: string, children: React.ReactNode, className?: string }) => {
   const [profile, setProfile] = useState<GithubProfile | null>()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -49,7 +51,7 @@ export const GithubHoverCard = ({ username, children: children }: { username: st
 
   return <HoverCard onOpenChange={setIsOpen}>
     <HoverCardTrigger asChild>
-      <Button variant={'link'} className="hover:no-underline">{children}</Button>
+      <Button variant={'link'} className={`hover:no-underline ${className}`}>{children}</Button>
     </HoverCardTrigger>
     {profile &&
       <HoverCardContent className="bg-gray-50/60 dark:bg-black/50 top-0 ml-4 backdrop-blur-3xl rounded-lg p-4 border-[2px] w-full">
