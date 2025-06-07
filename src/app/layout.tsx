@@ -31,7 +31,9 @@ export default function RootLayout({
       >
         <ThemeProvider attribute={"class"} defaultTheme="dark" enableSystem>
           <NavBar />
-          {children}
+          <main className="mt-20 mx-8 lg:mx-[20vh]">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
