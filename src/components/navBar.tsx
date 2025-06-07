@@ -66,14 +66,15 @@ export default function NavBar(): React.ReactElement {
             dark:hover:from-emerald-300 dark:hover:via-cyand-300
             hover:transition-colors hover:duration-500 duration-100 hover:ease-in">xsismadn3ss</h1>
             </Link>
-            <ul className=" hidden md:flex gap-4">
+            <ul className=" hidden md:flex gap-2">
               {routes.map((route, index) => (
                 <li key={index}>
                   <Link
                     href={route.path}
-                    className={`transition-colors px-2 py-1 duration-200 font-semibold
+                    className={`px-2 py-1 font-semibold bg-inherit
+                      hover:bg-primary/20 transition duration-200 ease-linear rounded-md
                     ${selected === route.title
-                        ? 'bg-emerald-500 dark:bg-emerald-600 rounded-md'
+                        ? 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-primary/80 dark:text-primary text-accent'
                         : 'bg-inherit'
                       }`}>{route.title}</Link>
                 </li>
