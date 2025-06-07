@@ -1,0 +1,39 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "El señor de los anillos",
+            "author": "J.R.R. Tolkien",
+            "pages": 1178,
+            "read": false
+        },
+        {
+            "id": 2,
+            "title": "El hobbit",
+            "author": "J.R.R. Tolkien",
+            "pages": 310,
+            "read": true
+        },
+        {
+            "id": 3,
+            "title": "El código Da Vinci",
+            "author": "Dan Brown",
+            "pages": 454,
+            "read": false
+        }
+    ],
+    "authors": [
+        {
+            "id": 1,
+            "name": "J.R.R. Tolkien",
+            "birthDate": "1937-01-03",
+            "country": "Reino Unido"
+        },
+        {
+            "id": 2,
+            "name": "Dan Brown",
+            "birthDate": "1964-06-21",
+            "country": "Estados Unidos"
+        }
+    ]
+}
