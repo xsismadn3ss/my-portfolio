@@ -35,14 +35,14 @@ export async function generateMetadata(): Promise<Metadata> {
         "Listado de proyectos web realizados, en esta página podrás encontrar proyectos de prectica o proyectos profesionales realizados en empresas.",
       url: `${url}/projects`,
       siteName: "Proyectos",
-      // images:[
-      //   {
-      //     url: `${url}/og/projects.png`,
-      //     width: 1200,
-      //     height: 630,
-      //     alt: "Proyectos",
-      //   }
-      // ]
+      images:[
+        {
+          url: `projects/projects.png`,
+          width: 500,
+          height: 500,
+          alt: "Proyectos",
+        }
+      ]
     },
   };
 }
