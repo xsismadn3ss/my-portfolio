@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/context/themeContext";
 import NavBar from "@/components/navBar";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +32,10 @@ export default function RootLayout({
       >
         <ThemeProvider attribute={"class"} defaultTheme="dark" enableSystem>
           <NavBar />
-          <main className="mt-20 mx-8 lg:mx-[20vh]">
+          <main className="mt-20 mx-8 lg:mx-[30vh]">
             {children}
           </main>
+          <Toaster/>
         </ThemeProvider>
       </body>
     </html>
