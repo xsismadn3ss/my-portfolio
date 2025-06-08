@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Proyectos",
       images: [
         {
-          url: `projects/projects.png`,
+          url: `${url}/projects/projects.png`,
           width: 500,
           height: 500,
           alt: "Proyectos",

@@ -4,11 +4,11 @@ import ApiDocumentation from "./apiDocumentation";
 import Image from "next/image";
 
 const project = projects.personal.find((p) => p.title == "API REST DEMO");
+const siteUrl = `${
+  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+}`;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const siteUrl = `${
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  }`;
 
   return {
     title: project?.title,
@@ -34,7 +34,7 @@ export default function ApiRestPage() {
     <>
       <div className="flex justify-center pt-10">
         <Image
-          src={`${project?.image}`}
+          src={`${siteUrl}${project?.image}`}
           alt="project image"
           width={220}
           height={220}
