@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute={"class"} defaultTheme="dark" enableSystem>
           <NavBar />
-          <main className="mt-20 mx-8 lg:mx-[30vh]">
+          <main className="mt-20 mx-6 md:mx-[20vh] lg:mx-[30vh]">
             {children}
           </main>
           <Toaster/>
