@@ -52,15 +52,15 @@ export default function NavBar(): React.ReactElement {
 
   return (
     <div className="block w-full fixed top-0 z-50 md:flex md:justify-center">
-      <header className="sm:px-4 sm:py-2 bg-transparent backdrop-blur-lg w-full md:w-[140vh] border-l-[2px] border-b-[2px] border-r-[2px] rounded-bl-md rounded-br-md">
+      <header className="md:px-4 md:py-2 bg-transparent backdrop-blur-lg w-full md:w-[140vh] border-l-[2px] border-b-[2px] border-r-[2px] rounded-bl-md rounded-br-md">
         <div className="flex justify-between items-end pb-2">
           <nav className="flex items-end">
             <Link href={"/"}>
               <h1
-                className="font-bold text-2xl mr-4 drop-shadow-md  
+                className="font-bold text-2xl md:mr-4 drop-shadow-md  
             hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent hover:from-emerald-500 hover:via-cyan-600 hover:to-primary/80
             dark:hover:from-emerald-300 dark:hover:via-cyand-300
-            hover:transition-colors hover:duration-500 duration-100 hover:ease-in scale-75 sm:scale-100"
+            hover:transition-colors hover:duration-500 duration-100 hover:ease-in scale-[0.8] md:scale-100"
               >
                 xsismadn3ss
               </h1>
@@ -84,7 +84,7 @@ export default function NavBar(): React.ReactElement {
               ))}
             </ul>
           </nav>
-          <div className="flex gap-2 items-end scale-75 md:scale-100">
+          <div className="flex gap-2 items-end scale-[0.7] md:scale-100">
             <SwitchTheme />
             <GithubHoverCard username="xsismadn3ss" className="pt-6">
               <div
