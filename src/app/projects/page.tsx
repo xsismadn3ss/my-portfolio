@@ -38,8 +38,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images:[
         {
           url: `projects/projects.png`,
-          width: 500,
-          height: 500,
+          width: 1200,
+          height: 1200,
           alt: "Proyectos",
         }
       ]
