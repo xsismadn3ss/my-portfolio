@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { projects } from "../page";
+import { projects } from "../projectsList";
 import ApiDocumentation from "./apiDocumentation";
 import Image from "next/image";
 
@@ -31,15 +31,19 @@ export default function ApiRestPage() {
   return (
     <>
       <div className="flex justify-center pt-10">
-      <Image
-      src={`${project?.image}`}
-      alt="project image"
-      width={220}
-      height={220}
-      className="rounded-md border-2"
-      />
+        <Image
+          src={`${project?.image}`}
+          alt="project image"
+          width={220}
+          height={220}
+          className="rounded-md border-2"
+        />
       </div>
-      <h1 className="text-3xl text-center"><span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-cyan-600 to-primary/80 w-fit">{project?.title}</span></h1>
+      <h1 className="text-3xl text-center">
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-cyan-600 to-primary/80 w-fit">
+          {project?.title}
+        </span>
+      </h1>
       <ApiDocumentation />
     </>
   );
