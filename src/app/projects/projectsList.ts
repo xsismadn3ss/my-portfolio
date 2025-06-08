@@ -5,7 +5,7 @@ export const projects = {
       description:
         "Un ejemplo de una API REST construida con Next.js, junto con documentación de definición de la API.",
       link: "/projects/api_rest",
-      image: "/projects/api_rest.png",
+      image: "/assets/projects/api_rest.png",
     },
   ],
   proffessional: [],
