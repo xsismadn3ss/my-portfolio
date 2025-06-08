@@ -1,7 +1,5 @@
 "use client";
-import axios from "axios";
 import Link from "next/link";
-import { toast } from "sonner";
 
 const API_URL =
   (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000") +
