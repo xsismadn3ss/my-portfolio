@@ -5,19 +5,21 @@ import Image from "next/image";
 
 const project = projects.personal.find((p) => p.title == "API REST DEMO");
 
-export const generateMetadata = async (): Promise<Metadata> => {
+export async function generateMetadata(): Promise<Metadata> {
+  const siteUrl = `${
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  }`;
+
   return {
     title: project?.title,
     description: project?.description,
     openGraph: {
       title: project?.title,
       description: project?.description,
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}${
-        project?.link
-      }`,
+      url: `${siteUrl}${project?.link}`,
       images: [
         {
-          url: `${project?.image}`,
+          url: `${siteUrl}${project?.image}`,
           height: 500,
           width: 500,
           alt: project?.title,
@@ -25,7 +27,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       ],
     },
   };
-};
+}
 
 export default function ApiRestPage() {
   return (
