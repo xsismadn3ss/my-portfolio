@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const projects = {
+export const projects = {
   personal: [
     {
       title: "API REST DEMO",
@@ -35,14 +35,14 @@ export async function generateMetadata(): Promise<Metadata> {
         "Listado de proyectos web realizados, en esta página podrás encontrar proyectos de prectica o proyectos profesionales realizados en empresas.",
       url: `${url}/projects`,
       siteName: "Proyectos",
-      images:[
+      images: [
         {
           url: `projects/projects.png`,
-          width: 1200,
-          height: 1200,
+          width: 500,
+          height: 500,
           alt: "Proyectos",
-        }
-      ]
+        },
+      ],
     },
   };
 }
