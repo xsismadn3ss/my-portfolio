@@ -109,14 +109,17 @@ const EndpoinDocumentation = ({
           <span className="font-semibold text-muted-foreground">Método: </span>
           <span className="text-emerald-600 font-mono">{entry.metodo}</span>
         </p>
-        <p>
+        <p className="flex gap-1 flex-wrap">
           <span className="font-semibold text-muted-foreground">Url: </span>
           <Link
             href={entry.url}
             target="_blank"
             className="text-cyan-600 underline"
           >
+            <span className="hidden md:block">
             {entry.url}
+            </span>
+            <span className="md:hidden">{entry.ruta}</span>
           </Link>
         </p>
         <div>
