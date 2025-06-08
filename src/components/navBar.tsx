@@ -51,8 +51,8 @@ export default function NavBar(): React.ReactElement {
   const selected = routes.find((route) => route.path === currentRoute)?.title;
 
   return (
-    <div className="flex justify-center">
-      <header className="px-4 py-2 bg-transparent backdrop-blur-lg fixed top-0 w-full lg:w-[140vh] border-l-[2px] border-b-[2px] border-r-[2px] rounded-bl-md rounded-br-md z-50">
+    <div className="block w-full fixed top-0 z-50 md:flex md:justify-center">
+      <header className="sm:px-4 sm:py-2 bg-transparent backdrop-blur-lg w-full md:w-[140vh] border-l-[2px] border-b-[2px] border-r-[2px] rounded-bl-md rounded-br-md">
         <div className="flex justify-between items-end pb-2">
           <nav className="flex items-end">
             <Link href={"/"}>
@@ -60,7 +60,7 @@ export default function NavBar(): React.ReactElement {
                 className="font-bold text-2xl mr-4 drop-shadow-md  
             hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent hover:from-emerald-500 hover:via-cyan-600 hover:to-primary/80
             dark:hover:from-emerald-300 dark:hover:via-cyand-300
-            hover:transition-colors hover:duration-500 duration-100 hover:ease-in scale-80 sm:scale-100"
+            hover:transition-colors hover:duration-500 duration-100 hover:ease-in scale-75 sm:scale-100"
               >
                 xsismadn3ss
               </h1>
