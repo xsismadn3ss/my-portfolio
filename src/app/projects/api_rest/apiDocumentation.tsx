@@ -99,12 +99,12 @@ const EndpoinDocumentation = ({
           </span>
           {entry.descripcion}
         </p>
-        <p>
+        <div className="flex gap-1 flex-wrap">
           <span className="font-semibold text-muted-foreground">Ruta: </span>
           <span className="bg-emerald-700 px-1 py-0.5 rounded-md dark:text-primary text-card">
             {entry.ruta}
           </span>
-        </p>
+        </div>
         <p>
           <span className="font-semibold text-muted-foreground">Método: </span>
           <span className="text-emerald-600 font-mono">{entry.metodo}</span>
