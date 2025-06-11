@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { projects } from "../projectsList";
-import ApiDocumentation from "./apiDocumentation";
+import { ApiApp } from "@/components/projects/api_rest/app/api-app";
+import { ApiDocumentation } from "@/components/projects/api_rest/docs/api-documentation";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 
 const project = projects.personal.find((p) => p.title == "API REST DEMO");
-const siteUrl = `${
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-}`;
+const siteUrl = `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  }`;
 
 export async function generateMetadata(): Promise<Metadata> {
 
@@ -46,7 +47,19 @@ export default function ApiRestPage() {
           {project?.title}
         </span>
       </h1>
-      <ApiDocumentation />
+      {/* pestañas */}
+      <Tabs defaultValue="app">
+        <TabsList>
+          <TabsTrigger value="app">App</TabsTrigger>
+          <TabsTrigger value="docs">Docs</TabsTrigger>
+        </TabsList>
+        <TabsContent value="app">
+          <ApiApp />
+        </TabsContent>
+        <TabsContent value="docs">
+          <ApiDocumentation />
+        </TabsContent>
+      </Tabs>
     </>
   );
 }
