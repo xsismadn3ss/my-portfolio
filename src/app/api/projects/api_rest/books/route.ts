@@ -12,8 +12,6 @@ export interface BookResponse {
 export async function GET(req: NextRequest): Promise<NextResponse<BookResponse[]>> {
     const authorParam = req.nextUrl.searchParams.get('author')
     const titleParam = req.nextUrl.searchParams.get('title')
-    // const 
-    console.log(authorParam)
     let books = data.books as BookResponse[]
 
     if (authorParam) {
