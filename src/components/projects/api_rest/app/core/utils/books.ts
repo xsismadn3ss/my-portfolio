@@ -11,7 +11,7 @@ export const getBooks = async (): Promise<BookResponse[]> => {
     return response.data
 }
 
-export const filterBooks = async (author?: string, title?: string): Promise<BookResponse[]> => {
+export const filterBooks = async ({ author, title }: { author?: string, title?: string }): Promise<BookResponse[]> => {
     if (author && title) {
         const response = await axios.get<BookResponse[]>(books_url + `?author=${author}&title=${title}`)
         return response.data
