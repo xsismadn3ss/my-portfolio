@@ -8,6 +8,7 @@ import {
   DrawerClose,
   DrawerContent,
   DrawerDescription,
+  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -27,20 +28,22 @@ function DrawerMenu() {
       <DrawerTrigger className="block md:hidden">
         <Equal />
       </DrawerTrigger>
-      <DrawerContent className="dark:bg-transparent dark:backdrop-blur-2xl">
+      <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Menu</DrawerTitle>
           <DrawerDescription></DrawerDescription>
         </DrawerHeader>
-        <ul className="flex flex-col gap-4 px-4 pb-6">
-          {routes.map((route, index) => (
-            <li key={index}>
-              <Link href={route.path}>
-                <DrawerClose>{route.title}</DrawerClose>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <DrawerFooter className="pb-8">
+          <ul className="flex flex-col gap-3">
+            {routes.map((route, index) => (
+              <li key={index}>
+                <Link className="active:text-emerald-500 focus:text-emerald-500 transition-colors duration-200 ease-in" href={route.path}>
+                  <DrawerClose>{route.title}</DrawerClose>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
@@ -51,8 +54,8 @@ export default function NavBar(): React.ReactElement {
   const selected = routes.find((route) => route.path === currentRoute)?.title;
 
   return (
-    <div className="block w-full fixed top-0 z-50 md:flex md:justify-center">
-      <header className="md:px-4 md:py-2 bg-transparent backdrop-blur-lg w-full md:w-[140vh] border-l-[2px] border-b-[2px] border-r-[2px] rounded-bl-md rounded-br-md">
+    <div className="block w-full fixed top-0 z-50 md:flex md:justify-center rounded-t-xl overflow-hidden">
+      <header className="md:px-4 md:py-2 bg-transparent backdrop-blur-lg w-full md:w-[140vh] border-b-[2px] rounded-bl-md rounded-br-md">
         <div className="flex justify-between items-end pb-2">
           <nav className="flex items-end">
             <Link href={"/"}>
@@ -72,11 +75,10 @@ export default function NavBar(): React.ReactElement {
                     href={route.path}
                     className={`px-2 py-1 font-semibold bg-inherit
                       hover:bg-primary/20 transition duration-200 ease-linear rounded-md
-                    ${
-                      selected === route.title
+                    ${selected === route.title
                         ? "bg-gradient-to-r from-emerald-600 via-cyan-600 to-primary/80 dark:text-primary text-accent"
                         : "bg-inherit"
-                    }`}
+                      }`}
                   >
                     {route.title}
                   </Link>
