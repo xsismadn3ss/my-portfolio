@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export default function NotFound(): React.ReactNode {
   return (
-    <>
-      <section className="flex justify-center h-[50vh] items-center">
+    <div className="h-[100vh]">
+      <section className="flex justify-center h-[55vh] items-center">
         <article className="flex flex-col items-center">
           <div className="flex gap-4 items-center">
           <Ghost className="scale-200 text-emerald-800" />
@@ -18,6 +18,6 @@ export default function NotFound(): React.ReactNode {
           </Button>
         </article>
       </section>
-    </>
+    </div>
   )
 }
